@@ -118,15 +118,44 @@ public class NewList<T> {
 
 ## 보충설명
 
+- 제네릭이란 클래스내부에서 사용할 데이터 타입을 외부에서 지정하는 기법을 의미한다. 
+![generic](https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/516/2136.png)
+
+- 예제 코드
+
+```Java
+class Test1<T>{
+    private T data;
+    public void set(T data){this.data = data;}
+    public T get(){return data;}
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Test1<String> t = new Test1<String>();
+        t.set("asd");
+        System.out.println(t.get());
+    }
+}
+```
+- t는 타입 매개변수를 의미한다. 
+
+- 제네릭이란 사용자가 전달하는 "형식" 을 매개 변수로 사용하여 형식 내부에서 형식 매개 변수로 정의된(주로 단일 형식 매개 변수에서는 T를 사용합니다) 형식을 교체하는 것
+
+![generic](http://cfile28.uf.tistory.com/image/252EB03754E491602F548E)
+
+출처: http://sime.tistory.com/56 [심이 블로그]
+출처: http://slaner.tistory.com/122 [꿈꾸는 프로그래머]
 
 
 ## TODO
 
+- 활용 예제를 직접만들어 볼 것
 
 
 ## Retrospect
 
-
+- 개념에 대한 이해는 가나, 코드 적으로 한 눈에 들어오지 않음.
 
 ## Output
 - 생략
